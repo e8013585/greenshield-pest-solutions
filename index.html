@@ -4,43 +4,330 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GreenShield Pest Solutions - Eco-Friendly Pest Control</title>
-    <meta name="description" content="GreenShield Pest Solutions offers eco-friendly pest control services in San Joaquin County, CA. Safe for families, tough on pests.">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Schema.org markup for Google -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "GreenShield Pest Solutions",
-      "image": "https://yourdomain.com/images/logo.png",
-      "telephone": "(209) 555-0199",
-      "email": "info@greenshieldpest.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "123 Greenway Blvd",
-        "addressLocality": "Stockton",
-        "addressRegion": "CA",
-        "postalCode": "95202",
-        "addressCountry": "US"
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday"
-        ],
-        "opens": "08:00",
-        "closes": "18:00"
-      }
-    }
-    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://placehold.co/1200x600/2E7D32/ffffff?text=Pest+Control') center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #2E7D32;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 10px;
+            transition: background 0.3s;
+        }
+        
+        .btn:hover {
+            background: #1B5E20;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #2E7D32;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            color: #2E7D32;
+            margin-bottom: 20px;
+        }
+        
+        footer {
+            background: #1B1B1B;
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 20px;
+            color: #C8E6C9;
+        }
+        
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .footer-section a:hover {
+            color: #C8E6C9;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            color: #aaa;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-content p {
+                font-size: 1.2rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>GreenShield Pest Solutions</h1>
+            <p>Eco-Friendly Pest Control That Protects Your Home and Planet</p>
+            <div>
+                <a href="#contact" class="btn">Get a Free Quote</a>
+                <a href="#services" class="btn" style="background: transparent; border: 2px solid white;">Our Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About GreenShield</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px; font-size: 1.2rem;">
+                At GreenShield Pest Solutions, we protect your home and family using environmentally 
+                responsible methods that are safe for people, pets, and the planet.
+            </p>
+            
+            <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: center;">
+                <div style="flex: 1; min-width: 300px;">
+                    <h3>Our Story</h3>
+                    <p>Founded in 2015, GreenShield Pest Solutions emerged from a simple idea: 
+                    protecting homes shouldn't harm the environment. Our founder saw a need for 
+                    truly eco-friendly pest control after struggling to find chemical-free options 
+                    for her own family.</p>
+                    <br>
+                    <p>Today, our team continues to pioneer new methods that eliminate pests while 
+                    preserving the health of your family and the planet.</p>
+                </div>
+                <div style="flex: 1; min-width: 300px; text-align: center;">
+                    <div style="background: #eee; height: 250px; display: flex; align-items: center; justify-content: center; border-radius: 10px;">
+                        Team Photo
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" style="background: #e8f5e9;">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🏠</div>
+                    <h3>Residential Pest Control</h3>
+                    <p>Safe and effective pest solutions for your home using eco-friendly treatments.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏢</div>
+                    <h3>Commercial Pest Solutions</h3>
+                    <p>Professional pest management for businesses with health department compliance.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🌿</div>
+                    <h3>Eco-Friendly Treatments</h3>
+                    <p>Plant-based and organic pest control solutions that work with nature.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🛡️</div>
+                    <h3>Pest Prevention Plans</h3>
+                    <p>Proactive protection to stop pests before they become a problem.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div style="display: flex; flex-wrap: wrap; gap: 40px;">
+                <div style="flex: 1; min-width: 300px;">
+                    <h3>Get in Touch</h3>
+                    <p style="margin-bottom: 20px;">Get a free consultation or quote today!</p>
+                    
+                    <div style="margin-bottom: 20px;">
+                        <strong>📍 Address:</strong><br>
+                        123 Greenway Blvd<br>
+                        Stockton, CA 95202
+                    </div>
+                    
+                    <div style="margin-bottom: 20px;">
+                        <strong>📞 Phone:</strong><br>
+                        <a href="tel:+12095550199">(209) 555-0199</a>
+                    </div>
+                    
+                    <div style="margin-bottom: 20px;">
+                        <strong>✉️ Email:</strong><br>
+                        <a href="mailto:info@greenshieldpest.com">info@greenshieldpest.com</a>
+                    </div>
+                    
+                    <div>
+                        <strong>🕒 Hours:</strong><br>
+                        Monday - Saturday: 8AM - 6PM
+                    </div>
+                </div>
+                
+                <div style="flex: 1; min-width: 300px;">
+                    <form style="background: #f8f9fa; padding: 30px; border-radius: 10px;">
+                        <div style="margin-bottom: 20px;">
+                            <label style="display: block; margin-bottom: 5px; font-weight: bold;">Full Name *</label>
+                            <input type="text" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px;">
+                        </div>
+                        
+                        <div style="display: flex; gap: 15px; margin-bottom: 20px;">
+                            <div style="flex: 1;">
+                                <label style="display: block; margin-bottom: 5px; font-weight: bold;">Email *</label>
+                                <input type="email" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px;">
+                            </div>
+                            <div style="flex: 1;">
+                                <label style="display: block; margin-bottom: 5px; font-weight: bold;">Phone</label>
+                                <input type="tel" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px;">
+                            </div>
+                        </div>
+                        
+                        <div style="margin-bottom: 20px;">
+                            <label style="display: block; margin-bottom: 5px; font-weight: bold;">Service</label>
+                            <select style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px;">
+                                <option>Select a service</option>
+                                <option>Residential Pest Control</option>
+                                <option>Commercial Pest Solutions</option>
+                                <option>Eco-Friendly Treatments</option>
+                                <option>Pest Prevention Plans</option>
+                            </select>
+                        </div>
+                        
+                        <div style="margin-bottom: 20px;">
+                            <label style="display: block; margin-bottom: 5px; font-weight: bold;">Message</label>
+                            <textarea rows="5" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px;"></textarea>
+                        </div>
+                        
+                        <button type="submit" style="background: #2E7D32; color: white; border: none; padding: 15px 30px; border-radius: 5px; font-weight: bold; cursor: pointer; width: 100%;">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>GreenShield Pest Solutions</h3>
+                    <p style="color: #ccc;">Eco-friendly pest control that protects your home and planet.</p>
+                    <div style="margin-top: 20px;">
+                        <a href="#" style="display: inline-block; margin-right: 15px;">📘</a>
+                        <a href="#" style="display: inline-block; margin-right: 15px;">🐦</a>
+                        <a href="#" style="display: inline-block; margin-right: 15px;">📸</a>
+                        <a href="#">💼</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="#">Home</a>
+                    <a href="#about">About Us</a>
+                    <a href="#services">Services</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>123 Greenway Blvd<br>Stockton, CA 95202</p>
+                    <p><a href="tel:+12095550199">(209) 555-0199</a></p>
+                    <p><a href="mailto:info@greenshieldpest.com">info@greenshieldpest.com</a></p>
+                    <p>Mon-Sat: 8AM - 6PM</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 GreenShield Pest Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
